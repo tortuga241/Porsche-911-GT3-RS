@@ -12,3 +12,8 @@
     font-family: 'Chack';
     src: url('../fonts/ChakraPetch-Regular.ttf');
 }
+
+@font-face {
+  font-family: "DMS";
+  src: url("../fonts/DMS.ttf") format("ttf");
+}

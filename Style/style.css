@@ -1,22 +1,6 @@
 @import "tailwindcss";
 @import "./fonts.css";
 
-* {
+body {
     background-color: black;
-}
-
-@font-face {
-  font-family: "Bebas";
-  src: url("../fonts/outist.ttf") format("ttf");
-}
-
-@font-face {
-  font-family: "Porsche";
-  src: url("../fonts/Porsche.ttf") format("ttf");
-
-}
-
-@font-face {
-  font-family: "Chack";
-  src: url("../fonts/ChakraPetch-Regular.ttf") format("ttf");
 }

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Style/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Document</title>
+    <title>Porsche 911 GT3 RS</title>
 </head>
 <body>
 <!-- Header -->
@@ -19,10 +19,29 @@
     <div class="w-[1440px] h-[2000px] bg-black m-auto flex flex-col"> 
 <!-- BANNER -->
         <div class="flex flex-col justify-around mt-[30px]">
-            <div class="bg-black"><img class="bg-black w-[440px] h-[155px] m-auto " src="./images/911.png" alt="911"></div>
-            <div class="bg-[#000000]"><img class="bg-[#000000] w-[1000px] m-auto" src="./images/porscheBaner.png" alt="Porsche 911 GT3 RS"></div>
-            <div class="font-[Chack] text-9xl text-white m-auto">911 GT3 RS</div>
-            <div class="text-[#6F6F6F] m-auto font-[Chack]">Fuel consumption combined: 13.2 l/100 km (preliminary value), CO2-emissions combined (WLTP)*: 299 g/km (preliminary value), CO2 Class: G (preliminary value)</div>
+            <div class="bg-black"><img class="bg-black w-[540px] h-[170px] m-auto relative top-7 z-0" src="./images/911.png" alt="911"></div>
+            <div class=""><img class="w-[1150px] m-auto relative z-10" src="./images/porscheBaner.png" alt="Porsche 911 GT3 RS"></div>
+            <div class="font-[Chack] text-8xl text-white m-auto mt-10 pt-5">911 GT3 RS</div>
+            <div class="text-[#6F6F6F] m-auto font-[Chack] ">Fuel consumption combined: 13.2 l/100 km (preliminary value), CO2-emissions combined (WLTP)*: 299 g/km (preliminary value), CO2 Class: G (preliminary value)</div>
+        </div>
+        <div class="h-[130px]"></div>
+<!-- BANNER END -->
+<!-- MAIN PART PAGE -->
+        <div class="flex flex-row justify-between" id="mainPart">
+            <div class="flex flex-col justify-around w-[50%] h-[500px] mt-[100px] ml-[100px]">
+                <div class="flex flex-col h-[100%] justify-between">
+                    <div class="font-[Bebas] text-white text-[90px] h-[60px]">3.2<span class="text-4xl">s</span></div>
+                    <div class="text-[#A0A0A0] text-[14px]">Acceleration 0 - 100 km/h</div>
+                    <div class="font-[Bebas] text-white text-[90px] h-[60px]">386 <span class="text-[30px]">k</span><span class="text-[35px]">w</span> <span class="text-[60px]">/</span> 525 <span class="text-[30px]">ps</span></div>
+                    <div class="text-[#A0A0A0] text-[14px]">Power (kW)/Power (PS)</div>
+                    <div class="font-[Bebas] text-white text-[90px] ">296 km/h</div>
+                </div>
+            </div>
+            <div><img class="w-[90%] m-auto pt-[140px]" src="./images/porscheFront.png" alt="Porsche 911 GT3 RS"></div>
+        </div>
+        <button class="ml-[100px] border-0 cursor-pointer bg-white text-black font-[Bebas] w-[130px] h-[40px] rounded-md text-[20px] mt-5 transition-all duration-300 ease-in-out hover:bg-[#91191A] hover:text-white" id="butSound">Sound Engine</button>
+        <div class="h-[250px] content-center">
+            <img class="m-auto w-[220px] pt-[150px]" src="./images/911small.png" alt="911 poster">
         </div>
     </div>
     <script src="./JS/script.js"></script>
