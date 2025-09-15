@@ -1,5 +1,20 @@
 console.log("Hello world!");
 
+//Открыть/закрыть меню
+const burgerBtn = document.getElementById("burger-btn");
+const mobileMenu = document.getElementById("mobile-menu");
+const closeBtn = document.getElementById("close-btn");
+
+burgerBtn.addEventListener("click", () => {
+  mobileMenu.classList.remove("hidden");
+});
+
+closeBtn.addEventListener("click", () => {
+  mobileMenu.classList.add("hidden");
+});
+
+
+
 const butAudio = document.getElementById('butSound');
 const audio = new Audio('./audio/engine.mp3');
 
@@ -33,6 +48,14 @@ window.addEventListener("scroll", () => {
       behavior: "smooth"
     });
   }
+});
+
+//Анимация 911 на банере
+window.addEventListener("DOMContentLoaded", () => {
+  const car = document.getElementById("car");
+  setTimeout(() => {
+    car.classList.add("opacity-100");
+  }, 100);
 });
 
 //Анимация цифр (второй блок)

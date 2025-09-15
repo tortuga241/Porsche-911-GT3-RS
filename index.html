@@ -10,24 +10,41 @@
 <body>
 <!-- Header -->
     <div class="flex flex-row bg-white h-16">
-        <div class="text-black bg-white font-[Porsche] m-auto pl-20 text-2xl">PORSCHE</div>
+        <div class="text-black bg-white font-[Porsche] m-auto pl-20 text-2xl lg:text-[30px]">PORSCHE</div>
         <div class="text-white bg-white content-center mr-16">
-            <img class="bg-white cursor-pointer" src="./images/burger.svg" alt="menu">
+            <img id="burger-btn" class="bg-white cursor-pointer" src="./images/burger.svg" alt="menu">
         </div>
+        <!-- Menu -->
+        <div id="mobile-menu" class="fixed top-0 right-0 w-[300px] h-full bg-white text-black hidden flex-col p-6 text-left font-[Chack] z-[9999]">
+            <button id="close-btn" class="mb-6 text-right">✕</button>
+            <a href="#" class="block py-2 hover:text-red-500">Home</a>
+            <a href="#" class="block py-2 hover:text-red-500">About</a>
+            <a href="#" class="block py-2 hover:text-red-500">Services</a>
+            <a href="#" class="block py-2 hover:text-red-500">Contact</a>
+        </div>
+
+        <!-- Menu end -->
+
     </div>
 <!-- Header end -->
-    <div class="w-[1440px] min-h-[2000px] bg-black m-auto flex flex-col"> 
+    <div class="w-[320px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1440px] lg:max-w-[100%] min-h-[2000px] bg-black m-auto flex flex-col lg:overflow-hidden">
+        <!-- <div class="w-[320px] sm:w-[100%] xl:w-[1440px] min-h-[2000px] bg-black m-auto flex flex-col lg:overflow-hidden"> -->
 <!-- BANNER -->
-        <div class="flex flex-col justify-around mt-[30px] mb-[80px]">
-            <div class="bg-black"><img class="bg-black w-[540px] h-[170px] m-auto relative top-7 z-0" src="./images/911.png" alt="911"></div>
-            <div class=""><img class="w-[1150px] m-auto relative z-10" src="./images/porscheBaner.png" alt="Porsche 911 GT3 RS"></div>
+        <div class="flex flex-col justify-around mt-[30px] mb-[80px]">  
+            <div class="bg-black"><img id="car" class="bg-black w-[300px] h-[100px] m-auto relative top-7 z-0 opacity-0 transition-opacity duration-1000 ease-in sm:w-[400px] sm:h-[130px] lg:w-[540px] lg:h-[170px]" src="./images/911.png" alt="911"></div>
+            <div>
+                <img 
+                    class="w-[320px] sm:w-[600px] md:w-[800px] lg:w-[1000px] xl:w-[1150px] m-auto relative z-10" 
+                    src="./images/porscheBaner.png" 
+                    alt="Porsche 911 GT3 RS">
+            </div>
             <h1 class="font-[Chack] text-8xl text-white m-auto mt-10 pt-5">911 GT3 RS</h1>
-            <div class="text-[#6F6F6F] m-auto font-[Chack] ">Fuel consumption combined: 13.2 l/100 km (preliminary value), CO2-emissions combined (WLTP)*: 299 g/km (preliminary value), CO2 Class: G (preliminary value)</div>
+            <div class="text-[#6F6F6F] sm:text-[10px] m-auto font-[Chack] ">Fuel consumption combined: 13.2 l/100 km (preliminary value), CO2-emissions combined (WLTP)*: 299 g/km (preliminary value), CO2 Class: G (preliminary value)</div>
         </div>
-        <div class="h-[130px]"></div>
+        <div class="sm:hidden lg:h-[130px]"></div>
 <!-- BANNER END -->
 <!-- MAIN PART PAGE -->
-        <div class="flex flex-row justify-between" id="mainPart">
+        <div class="flex sm:flex-col lg:flex-row justify-between" id="mainPart">
         <div class="flex flex-col justify-around w-[50%] h-[500px] mt-[100px] ml-[100px]">
             <div class="flex flex-col h-[100%] justify-between">
 
@@ -38,10 +55,10 @@
             <div class="text-[#A0A0A0] text-[14px]">Acceleration 0 - 100 km/h</div>
             <!-- Acceleration end-->
             <!-- Power -->
-            <div class="font-[Bebas] text-white text-[90px] h-[60px]">
+            <div class="font-[Bebas] text-white min-w-[500px] text-[90px] h-[60px]">
                 <span class="counter" data-target="386">0</span>
                 <span class="text-[30px]">k</span><span class="text-[35px]">w</span>
-                <span class="text-[60px]">/</span>
+                <span class="text-[60px]">/</span>  
                 <span class="counter" data-target="525">0</span>
                 <span class="text-[30px]">ps</span>
             </div>
@@ -56,7 +73,7 @@
             </div>
         </div>
         <div>
-            <img class="w-[93%] m-auto pt-[160px]" src="./images/porscheFront.png" alt="Porsche 911 GT3 RS">
+            <img class="sm:w-[90%] lg:w-[93%] m-auto lg:pt-[160px]" src="./images/porscheFront.png" alt="Porsche 911 GT3 RS">
         </div>
         </div>
         <button class="ml-[100px] border-0 cursor-pointer bg-white text-black font-[Bebas] w-[130px] h-[40px] rounded-md text-[20px] mt-5 transition-all duration-300 ease-in-out hover:bg-[#91191A] hover:text-white" id="butSound">Sound Engine</button>
@@ -66,54 +83,69 @@
 <!-- MAIN PART PAGE END-->
 <!-- MAIN INFORMATION PART -->
         <div class="flex flex-col mt-[100px]">
-            <div class="flex flex-row justify-between">
-                <img class="w-[1000px] h-[650px]" src="./images/PorscheB1.png" alt="Porsche 911 GT3 RS">
-                <div class="flex flex-col">
-                    <h2 class="text-white font-[Bebas] text-[40px] h-[70px] text-center">The Essence of Porsche Design</h2>
-                    <p class="text-white text-[19px] m-auto font-[Chack]">
-                        Porsche design represents the perfect harmony between aesthetics and performance. Every model embodies timeless elegance, where every line and detail serves a clear purpose. The low, aerodynamic silhouette and fluid curves are not only visually striking but also engineered to enhance speed and stability on the road. Each contour is carefully sculpted to reflect movement, even at a standstill. <br><br>
-                        Inside, the philosophy of driver-focused design comes to life. The cockpit is crafted with precision, placing every control within easy reach to create a seamless connection between driver and machine. Premium materials, refined textures, and advanced digital interfaces merge luxury with functionality, offering both comfort and control. <br><br>
-                        Porsche design is more than beauty — it is a symbol of innovation, agility, and uncompromising performance. It transforms driving into an art form, making every journey a powerful expression of style and engineering excellence.
-                    </p>
-                </div>
+                <div class="flex sm:flex-col lg:flex-row justify-between">
+                    <div class="flex flex-col lg:flex-row items-center lg:items-start gap-10">
+            <!-- Картинка -->
+            <img class="w-full sm:w-[80%] lg:w-[60%] max-w-[1000px] m-auto h-auto" src="./images/PorscheB1.png" alt="Porsche 911 GT3 RS">
+            <!-- Текст -->
+            <div class="flex flex-col lg:w-[40%]">
+                <h2 class="text-white font-[Bebas] text-2xl sm:text-3xl lg:text-4xl text-center lg:text-left mb-6">
+                    The Essence of Porsche Design
+                </h2>
+                <p class="text-white text-sm sm:text-base lg:text-lg font-[Chack] leading-relaxed text-center lg:text-left  w-[450px]">
+                    Porsche design represents the perfect harmony between aesthetics and performance. Every model embodies timeless elegance, where every line and detail serves a clear purpose. The low, aerodynamic silhouette and fluid curves are not only visually striking but also engineered to enhance speed and stability on the road. Each contour is carefully sculpted to reflect movement, even at a standstill. <br><br>
+                    Inside, the philosophy of driver-focused design comes to life. The cockpit is crafted with precision, placing every control within easy reach to create a seamless connection between driver and machine. Premium materials, refined textures, and advanced digital interfaces merge luxury with functionality, offering both comfort and control. <br><br>
+                    Porsche design is more than beauty — it is a symbol of innovation, agility, and uncompromising performance. It transforms driving into an art form, making every journey a powerful expression of style and engineering excellence.
+                </p>
             </div>
-            <div class="flex flex-row justify-between mt-[100px]">
-                <div class="flex flex-col ml-[50px] mt-[50px]">
-                    <h2 class="text-white font-[Bebas] text-[40px] h-[80px] text-center">Precision and Power on the Track</h2>
-                    <p class="text-white text-[19px] text-left font-[Chack] w-[560px]">
-                        On the racetrack, Porsche proves why it stands as a benchmark in performance engineering. Every model is built with razor-sharp handling that allows drivers to master every curve with confidence. The steering is precise and responsive, translating even the smallest input into immediate action. With a lightweight chassis and perfectly balanced weight distribution, Porsche delivers agility that feels natural at high speeds.<br><br>
-                        Acceleration is instant, launching the car from corner to corner with relentless power, while advanced braking systems ensure absolute control when it matters most. Aerodynamic design enhances stability, keeping the car firmly planted even in the fastest straights. <br><br>
-                        A Porsche on the track is not just about speed — it is about connection. It combines engineering excellence with driving emotion, turning every lap into an exhilarating experience of precision, control, and unstoppable performance.
-                    </p>
-                </div>
-                <img class="max-w-[1000px] h-[750px]" src="./images/PorscheB2.png" alt="Posrche 911">
             </div>
-            <div class="flex flex-row justify-between mb-[80px]">
-                <img class="w-[600px] h-[700px]" src="./images/PorscheB3.png" alt="Porsche 911 GT3 RS">
-                <div class="flex flex-col mt-[70px]">
-                    <h2 class="text-white font-[Bebas] text-[40px] h-[70px] text-center">Unmatched Suspension and Braking Excellence</h2>
-                    <p class="text-white text-[19px] w-[650px] font-[Chack]">
+                </div>
+                <div class="flex flex-col-reverse lg:flex-row items-center lg:items-start gap-10 mt-20">
+            <!-- Текст -->
+            <div class="flex flex-col lg:w-[40%]">
+                <h2 class="text-white font-[Bebas] text-2xl sm:text-3xl lg:text-4xl text-center lg:text-left mb-6">
+                    Precision and Power on the Track
+                </h2>
+                <p class="text-white text-sm sm:text-base lg:text-lg font-[Chack] leading-relaxed text-center lg:text-left w-[480px]">
+                    On the racetrack, Porsche proves why it stands as a benchmark in performance engineering. Every model is built with razor-sharp handling that allows drivers to master every curve with confidence. The steering is precise and responsive, translating even the smallest input into immediate action. With a lightweight chassis and perfectly balanced weight distribution, Porsche delivers agility that feels natural at high speeds. <br><br>
+                    Acceleration is instant, launching the car from corner to corner with relentless power, while advanced braking systems ensure absolute control when it matters most. Aerodynamic design enhances stability, keeping the car firmly planted even in the fastest straights. <br><br>A Porsche on the track is not just about speed — it is about connection. It combines engineering excellence with driving emotion, turning every lap into an exhilarating experience of precision, control, and unstoppable performance.
+                </p>
+            </div>
+            <!-- Картинка -->
+            <img class="w-full sm:w-[40%] lg:w-[40%] max-w-[800px] h-auto m-auto" src="./images/PorscheB2.png" alt="Porsche 911">
+            </div>
+            <div class="flex flex-col lg:flex-row justify-between mb-[80px]">
+            <!-- Картинка -->
+                <img class="w-full sm:w-[80%] lg:w-[50%] max-w-[1000px] h-auto m-auto" src="./images/PorscheB3.png" alt="Porsche 911 GT3 RS">
+                <div class="flex flex-col mt-[70px] lg:w-[50%]">
+            <!-- Текст -->
+                    <h2 class="text-white font-[Bebas] text-2xl sm:text-3xl lg:text-4xl text-center lg:text-left mb-6">Unmatched Suspension and Braking Excellence</h2>
+                    <p class="text-white text-sm sm:text-base sm:m-auto lg:m-0 lg:text-lg font-[Chack] leading-relaxed lg:text-left lg:w-[80%] w-[480px]">
                         Porsche engineering is defined by its ability to balance comfort with uncompromising performance, and nowhere is this clearer than in its suspension and braking systems. The adaptive suspension is finely tuned to deliver maximum stability at high speeds while maintaining agility through the sharpest corners. It responds instantly to changing road conditions, ensuring precision and confidence whether on track or city streets. <br><br>
                         Equally advanced is the braking technology. Porsche’s high-performance brakes provide consistent stopping power, even under extreme conditions. Ceramic composite options reduce weight and resist fade, offering unparalleled durability and control. Together, the suspension and braking systems create a seamless harmony, allowing the driver to push limits with absolute safety and confidence. <br><br>
                         Every component is engineered with purpose — to provide the perfect blend of agility, control, and unmatched driving exhilaration.
                     </p>
                 </div>
             </div>
-             <img class="w-[1000px] h-[290px] m-auto" src="./images/PorscheSil.png" alt="porsche">
+                <img class="sm:w-[500px] sm:h-[150px] lg:w-[1000px] lg:h-[290px] m-auto" src="./images/PorscheSil.png" alt="porsche">
         </div>
 <!-- MAIN INFORMATION PART END-->
     </div>
 <!-- ADOPTIVE DIV END -->
 <!-- FOOTER -->
-    <div class="bg-[#0E0E12] h-[220px] flex flex-col mt-[50px]">
-        <div class="flex flex-row justify-around text-white w-[700px] font-[Chack] ml-[100px] mt-[30px] text-[14px]">
+    <footer class="bg-[#0E0E12] flex flex-col items-center justify-center py-6 mt-12">
+  <!-- Навигация -->
+        <div class="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-6 text-white font-[Chack] text-sm sm:text-base text-center sm:text-left h-[50px]">
             <div>© 2025 Porsche motors</div>
             <div class="underline cursor-pointer">Legal information</div>
             <div class="underline cursor-pointer">Privacy Policy</div>
             <div class="underline cursor-pointer">Cookies Policy</div>
         </div>
-        <div class="font-[Porsche] text-white text-2xl m-auto">PORSCHE</div>
-    </div>
+    <!-- Лого -->
+        <div class="font-[Porsche] text-white text-2xl sm:text-3xl mt-6 pb-[50px]">
+            PORSCHE
+        </div>
+    </footer>
 <!-- FOOTER END -->
     <script src="./JS/script.js"></script>
 </body>
